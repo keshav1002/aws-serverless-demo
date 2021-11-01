@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>Calculator 😉</h1>
+  <div>
+    <form>
+      <input type="number" name="firstNumberInput" [(ngModel)]="firstNumber" />
+      +
+      <input
+        type="number"
+        name="secondNumberInput"
+        [(ngModel)]="secondNumber"
+      />
+      =
+      <input type="number" name="answerInput" [(ngModel)]="answer" disabled />
+    </form>
+    <div class="spinner-wrapper">
+      <div [hidden]="!showLoader" class="spinner">
+        <img alt="loading-spinner" src="assets/spinner.svg" />
+      </div>
+    </div>
+    <div class="buttons-wrapper">
+      <button
+        class="btn btn-add"
+        type="submit"
+        (click)="addTwoNumbers(firstNumber, secondNumber)"
+      >
+        ADD
+      </button>
+      <button class="btn btn-clear" (click)="clearNumbers()">C</button>
+    </div>
+  </div>
+</div>
