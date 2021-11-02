@@ -1,0 +1,27 @@
+service: api
+frameworkVersion: "2"
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: ${opt:stage, 'dev'}
+  region: ap-south-1
+  lambdaHashingVersion: "20201221"
+
+functions:
+  addTwoNumbers:
+    handler: handler.addTwoNumbers
+    events:
+      - httpApi:
+          path: calculator/add
+          method: post
+
+plugins:
+  - serverless-prune-plugin
+  - serverless-offline
+
+package:
+  exclude:
+    - node_modules/serverless-offline/**
+    - node_modules/serverless/**
+    - node_modules/serverless-prune-plugin/**

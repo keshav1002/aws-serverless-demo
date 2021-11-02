@@ -1,0 +1,24 @@
+{
+  "name": "aws-serverless-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keshav1002/aws-serverless-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keshav1002/aws-serverless-demo/issues"
+  },
+  "homepage": "https://github.com/keshav1002/aws-serverless-demo#readme",
+  "devDependencies": {
+    "serverless": "^2.64.1",
+    "serverless-prune-plugin": "^1.6.1"
+  }
+}

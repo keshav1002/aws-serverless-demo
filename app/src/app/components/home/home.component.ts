@@ -17,14 +17,14 @@ export class HomeComponent implements OnInit {
   addTwoNumbers = async (firstNumber: number, secondNumber: number) => {
     try {
       this.showLoader = true;
-      const respone = await this.homeService.addTwoNumbers(
+      const response: any = await this.homeService.addTwoNumbers(
         firstNumber,
         secondNumber
       );
-      this.answer = firstNumber + secondNumber;
+      if (response && response.answer) this.answer = response.answer;
     } catch (e: any) {
       console.error(e);
-      alert(e.message);
+      alert(e.error.message);
     } finally {
       this.showLoader = false;
     }

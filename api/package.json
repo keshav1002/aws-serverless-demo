@@ -1,0 +1,20 @@
+{
+  "name": "calculator-api",
+  "version": "0.0.1",
+  "description": "API for calculator application",
+  "main": "handler.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sls offline --stage local --httpPort 5001 --lambdaPort 3001 --useChildProcesses"
+  },
+  "author": "Keshav Kumaresan <keshavkumaresan1002@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "serverless": "^2.64.1",
+    "serverless-offline": "^8.2.0",
+    "serverless-prune-plugin": "^1.6.1"
+  }
+}
