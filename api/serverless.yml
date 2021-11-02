@@ -12,7 +12,7 @@ functions:
   addTwoNumbers:
     handler: handler.addTwoNumbers
     events:
-      - httpApi:
+      - http:
           path: calculator/add
           method: post
 

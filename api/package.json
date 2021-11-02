@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "sls offline --stage local --httpPort 5001 --lambdaPort 3001 --useChildProcesses"
+    "start": "sls offline --stage local --httpPort 5001 --lambdaPort 3001 --useChildProcesses",
+    "deploy-dev": "sls deploy --stage dev"
   },
   "author": "Keshav Kumaresan <keshavkumaresan1002@gmail.com>",
   "license": "ISC",
